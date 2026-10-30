@@ -1,9 +1,21 @@
 const express = require("express");
 const mysql = require("mysql2");
 const path = require("path");
+const { exec } = require("child_process");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+exec(
+  "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css",
+  (err, stdout, stderr) => {
+    if (err) {
+      console.error("Gagal build Tailwind:", err);
+      return;
+    }
+    console.log("Tailwind CSS berhasil di-build otomatis!");
+  },
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
