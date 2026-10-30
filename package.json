@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "body-parser": "^2.4.0",
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6",
+    "tailwindcss": "^4.3.3"
+  },
+  "name": "to_do_list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}
